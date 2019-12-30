@@ -5,9 +5,14 @@ Main file: Radar_Target_Generation_and_Detection.m
 2D CFAR Steps:
 
 Determine the number of Training cells for each dimension. Similarly, pick the number of guard cells.
+
     %Select the number of Training Cells in both the dimensions.
     Td = 2; %Doppler training cell dim
     Tr = 20; %Range training cell dim
+    %Select the number of Guard Cells in both dimensions around the Cell under 
+    %test (CUT) for accurate estimation
+    Gd = 2; %Doppler guard cell dim
+    Gr = 5; %Range guard cell dim
 Slide the cell under test across the complete matrix. Make sure the CUT has margin for Training and Guard cells from the edges.
 For every iteration sum the signal level within all the training cells. To sum convert the value from logarithmic to linear using db2pow function.
 Average the summed values for all of the training cells used. After averaging convert it back to logarithmic using pow2db.
