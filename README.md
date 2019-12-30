@@ -4,7 +4,7 @@ Main file: Radar_Target_Generation_and_Detection.m
 
 2D CFAR Steps:
 
-* Determine the number of Training cells for each dimension. Similarly, pick the number of guard cells.
+Determine the number of Training cells for each dimension. Similarly, pick the number of guard cells.
 %%Training cell dimensions were chosen iteratively.
 
     %Select the number of Training Cells in both the dimensions.
